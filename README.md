@@ -45,5 +45,6 @@ env_auth = true
 endpoint = https://votre-endpoint-s3
 region = us-east-1
 acl = private
+```
 
 Un exemple est fourni via sample_rclone.conf
