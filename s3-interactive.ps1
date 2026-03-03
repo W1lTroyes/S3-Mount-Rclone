@@ -36,7 +36,7 @@ Write-Host "Listing des buckets pour la config '$config'..."
 Write-Host ""
 
 try {
-    ./rclone.exe mount $config":" $drive --vfs-cache-mode full --links
+    ./rclone.exe mount $config":" $drive":" --vfs-cache-mode full --links
 } catch {
     Write-Host ""
     Write-Host "ERREUR rclone :" -ForegroundColor Red
@@ -44,4 +44,5 @@ try {
 }
 
 Write-Host ""
+
 Read-Host "Fin - Appuyez sur Entrée pour fermer"
