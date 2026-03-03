@@ -43,5 +43,23 @@ endpoint = https://votre-endpoint-s3
 region = us-east-1
 acl = private
 ```
+Par défaut, le fichier de configuration est dans : C:\Users\[USER]\AppData\Roaming\rclone
+
+Vous pouvez aussi la créer en ligne de commande via la commande :
+```
+rclone.exe config
+```
 
 Un exemple est fourni via sample_rclone.conf
+
+## Utilisation
+Les scripts sont à mettre au même endroit que l'exécutable rclone ou s'assurer que rclone est bien une variable d'environnement
+
+Lancer launcher.cmd
+Suivre les instructions
+- Renseigner le nom de la config pré renseignée dans le fichier de configuration rclone
+- Renseigner l'access key
+- Renseigner la secret key
+- Renseigner la lettre du lecteur réseau
+
+
