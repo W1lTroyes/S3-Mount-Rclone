@@ -1,11 +1,8 @@
-# Rclone S3 Interactive (Windows)
+# Rclone S3 (Windows)
 
-Outil interactif pour :
-- lister les buckets S3
-- lister le contenu d’un bucket
-- monter un bucket S3 comme lecteur Windows
+Le script a pour objectif de monter simplement en ligne de commande un lecteur S3 mappé sur un lecteur explorateur windows
 
-Compatible **S3 privé (non AWS)** et **environnements Windows verrouillés (GPO)**.
+Compatible **S3 privé ** 
 
 ---
 
@@ -38,7 +35,7 @@ Compatible **S3 privé (non AWS)** et **environnements Windows verrouillés (GPO
 Un remote rclone déjà configuré avec :
 
 ```ini
-[private-s3]
+[Nom_Config]
 type = s3
 provider = Other
 env_auth = true
