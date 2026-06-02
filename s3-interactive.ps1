@@ -20,6 +20,7 @@ $config = Read-Host "Nom de la configuration rclone"
 $accessKey = Read-Host "Access Key"
 $secretKey = Read-Host "Secret Key"
 $drive = Read-Host "Lettre montage réseau"
+$cache = Read-Host "Lettre montage lecteur pour le cache S3 local"
 
 if ([string]::IsNullOrWhiteSpace($config)) {
     Write-Host "ERREUR : nom de config vide" -ForegroundColor Red
@@ -36,7 +37,7 @@ Write-Host "Listing des buckets pour la config '$config'..."
 Write-Host ""
 
 try {
-    ./rclone.exe mount $config":" $drive":" --vfs-cache-mode full --links
+    ./rclone.exe mount $config":" $drive":" --vfs-cache-mode full --cache-dir $cache:\rclone-cache --links
 } catch {
     Write-Host ""
     Write-Host "ERREUR rclone :" -ForegroundColor Red
